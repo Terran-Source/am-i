@@ -1,0 +1,28 @@
+{
+  "name": "am-i",
+  "version": "1.0.0",
+  "description": "A collection of type detection library for javascript NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terran-Source/am-i.git"
+  },
+  "keywords": [
+    "javascript",
+    "Node",
+    "type-detection"
+  ],
+  "author": "Tamal Patra <patra.tamal@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Terran-Source/am-i/issues"
+  },
+  "homepage": "https://github.com/Terran-Source/am-i#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}

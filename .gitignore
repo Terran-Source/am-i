@@ -1,0 +1,5 @@
+# Hexo profile
+Thumbs.db
+*.log
+node_modules/
+www/
