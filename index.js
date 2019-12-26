@@ -1,34 +1,39 @@
 const isFunction = function(obj) {
-    return typeof obj === 'function';
-  },
-  isObject = function(obj) {
-    return obj === Object(obj);
-  },
-  isArray = function(obj) {
-    return Object.prototype.toString.call(obj) === '[object Array]';
-  },
-  isString = function(obj) {
-    return typeof obj === 'string' || obj instanceof String;
-  },
-  isBoolean = function(obj) {
-    return true === obj || false === obj;
-  },
-  isDate = function(dt) {
-    return typeof dt === 'Date' || dt instanceof Date;
-  },
-  isUpperCase = function(s) {
-    return s == s.toUpperCase();
-  },
-  isLowerCase = function(s) {
-    return s == s.toLowerCase();
-  },
-  isNumber = function(str, ignoreString) {
-    //var str = this;
-    //return $.trim(str).replace(/(\r\n|\n|\r)/gm, "").replace(/[^a-zA-Z0-9]/g, '_');
-    var _rex = /^[-]?(?=.)(?:\d+,)*\d*(?:\.\d+)?$/;
-    if (true === ignoreString) return !isString(str) && _rex.test(str);
-    return _rex.test(str) && _rex.test(parseFloat(str));
-  };
+  return typeof obj === 'function';
+};
+const isObject = function(obj) {
+  return obj === Object(obj);
+};
+const isArray = function(obj) {
+  return Object.prototype.toString.call(obj) === '[object Array]';
+};
+const isString = function(obj) {
+  return typeof obj === 'string' || obj instanceof String;
+};
+
+/**
+ * Check if a javascript instance is boolean
+ * @param {any} obj - the object instance
+ */
+const isBoolean = function(obj) {
+  return true === obj || false === obj;
+};
+const isDate = function(dt) {
+  return typeof dt === 'Date' || dt instanceof Date;
+};
+const isUpperCase = function(s) {
+  return s == s.toUpperCase();
+};
+const isLowerCase = function(s) {
+  return s == s.toLowerCase();
+};
+const isNumber = function(str, ignoreString) {
+  //var str = this;
+  //return $.trim(str).replace(/(\r\n|\n|\r)/gm, "").replace(/[^a-zA-Z0-9]/g, '_');
+  var _rex = /^[-]?(?=.)(?:\d+,)*\d*(?:\.\d+)?$/;
+  if (true === ignoreString) return !isString(str) && _rex.test(str);
+  return _rex.test(str) && _rex.test(parseFloat(str));
+};
 
 // Don't extent Object.prototype with jquery. all hell's break loose
 // read: http://erik.eae.net/archives/2005/06/06/22.13.54/
